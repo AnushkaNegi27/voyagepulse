@@ -3,12 +3,12 @@
 VoyagePulse is an intelligent system designed to streamline SoF (Statement of Facts) Event Extraction – Laytime Intelligence.
 It helps shipping companies and operators by automatically extracting operational events from SoF documents (PDF/Word), ensuring accuracy, consistency, and efficiency.
 
-🚢 Problem Statement
+## Problem Statement
 
 Thousands of SoF documents are generated daily worldwide, often in inconsistent formats.
 These documents capture vital port operations like cargo loading, shifting, anchorage, etc., along with start and end times.
 
-# Challenges
+### Challenges
 
 Format variations across different ports and agencies.
 
@@ -16,7 +16,7 @@ Risk of missed events due to unstructured data.
 
 Manual processing delays affecting voyage performance.
 
-# Our Solution – VoyagePulse
+### Our Solution – VoyagePulse
 
 VoyagePulse provides an AI-driven system that:
 
@@ -42,7 +42,7 @@ Providing visual dashboards & analytics for better laytime intelligence.
 
 Designed with scalable cloud infrastructure (Azure) for enterprise adoption.
 
-# Core Tech Stack
+### Core Tech Stack
 
 🔹 Frontend (User Interface)
 
@@ -84,7 +84,8 @@ Azure Web Apps, Azure Functions, Azure SQL, Azure Logic Apps
 
 GitHub Actions / Azure DevOps – CI/CD pipeline automation
 
-# System Architecture Overview
+
+### System Architecture Overview
 
 The architecture is designed for modularity, scalability, and maintainability:
 
@@ -120,7 +121,7 @@ Export to JSON/CSV for integrations.
 
 Automated PDF/Excel report generation.
 
-# Getting Started
+### Getting Started
 
 1. Clone the repository
    ```bash
@@ -131,21 +132,25 @@ Automated PDF/Excel report generation.
   Frontend:
    ```bash
    npm install
+   ```
    
   Backend:
    ```bash
    pip install -r requirements.txt
+   ```
    
 4. Run the application
    Frontend:
    ```bash
    npm start
+   ```
    
    Backend:
    ```bash
    python app.py
+   ```
 
-# Contributors
+### Contributors
 
 Anushka Negi
 Abhinav Khatana
