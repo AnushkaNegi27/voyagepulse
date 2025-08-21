@@ -8,7 +8,7 @@ It helps shipping companies and operators by automatically extracting operationa
 Thousands of SoF documents are generated daily worldwide, often in inconsistent formats.
 These documents capture vital port operations like cargo loading, shifting, anchorage, etc., along with start and end times.
 
-## Challenges
+# Challenges
 
 Format variations across different ports and agencies.
 
@@ -119,3 +119,31 @@ Reporting & Export Layer
 Export to JSON/CSV for integrations.
 
 Automated PDF/Excel report generation.
+
+# Getting Started
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/AnushkaNegi27/voyagepulse.git
+   cd voyagepulse
+   
+2. Install dependencies
+   Frontend:
+   ```bash
+   npm install
+   Backend:
+   ```bash
+   pip install -r requirements.txt
+   
+3. Run the application
+   Frontend:
+   ```bash
+   npm start
+   Backend:
+   ```bash
+   python app.py
+
+# Contributors
+
+Anushka Negi
+Abhinav Khatana
