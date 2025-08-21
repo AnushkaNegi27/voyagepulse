@@ -30,7 +30,7 @@ VoyagePulse provides an AI-driven system that:
 
 🖥️ Includes a user-friendly web interface for uploads and reports.
 
-# Why VoyagePulse is Unique
+### Why VoyagePulse is Unique
 
 Unlike existing SoF parsing tools, VoyagePulse goes beyond basic extraction by:
 
@@ -129,17 +129,18 @@ Automated PDF/Excel report generation.
    cd voyagepulse
    
 2. Install dependencies
-  Frontend:
+   
+   Frontend:
    ```bash
    npm install
    ```
-   
-  Backend:
+   Backend:
    ```bash
    pip install -r requirements.txt
    ```
    
 4. Run the application
+   
    Frontend:
    ```bash
    npm start
@@ -153,4 +154,5 @@ Automated PDF/Excel report generation.
 ### Contributors
 
 Anushka Negi
+
 Abhinav Khatana
