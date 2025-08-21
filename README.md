@@ -131,6 +131,7 @@ Automated PDF/Excel report generation.
    Frontend:
    ```bash
    npm install
+   
    Backend:
    ```bash
    pip install -r requirements.txt
@@ -139,6 +140,7 @@ Automated PDF/Excel report generation.
    Frontend:
    ```bash
    npm start
+   
    Backend:
    ```bash
    python app.py
