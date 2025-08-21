@@ -128,15 +128,15 @@ Automated PDF/Excel report generation.
    cd voyagepulse
    
 2. Install dependencies
-   Frontend:
+  Frontend:
    ```bash
    npm install
    
-   Backend:
+  Backend:
    ```bash
    pip install -r requirements.txt
    
-3. Run the application
+4. Run the application
    Frontend:
    ```bash
    npm start
