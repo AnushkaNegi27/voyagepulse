@@ -5,16 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoyagePulse – File Upload</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>VoyagePulse – Upload a File</h1>
+  <div class="wrapper">
+    <h1>VoyagePulse</h1>
+    <p class="subtitle">Upload your file and get a JSON output instantly</p>
 
-  <div class="container">
-    <input type="file" id="fileInput" />
-    <br>
-    <button id="uploadBtn">Upload & Download JSON</button>
-
-    <div id="output"></div>
+    <div class="container">
+      <label for="fileInput" class="custom-file-input">
+        Choose File
+      </label>
+      <input type="file" id="fileInput" hidden />
+      
+      <button id="uploadBtn">Upload & Download JSON</button>
+      <div id="output"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
