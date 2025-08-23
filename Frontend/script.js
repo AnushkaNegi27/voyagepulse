@@ -1,7 +1,10 @@
+let processedBlob = null; // Store processed file for download
+
 async function uploadFile() {
   const fileInput = document.getElementById("fileInput");
   const output = document.getElementById("output");
   const uploadBtn = document.getElementById("uploadBtn");
+  const downloadBtn = document.getElementById("downloadBtn");
 
   if (!fileInput.files.length) {
     alert("Please select a file first!");
@@ -9,8 +12,15 @@ async function uploadFile() {
   }
 
   uploadBtn.disabled = true;
-  output.innerHTML = `<div class="spinner"></div> Uploading <b>${fileInput.files[0].name}</b>...`;
-  
+  downloadBtn.disabled = true;
+  output.innerHTML = "";
+
+  // Spinner
+  const spinner = document.createElement("div");
+  spinner.className = "spinner";
+  output.appendChild(spinner);
+  const textNode = document.createTextNode(` Uploading ${fileInput.files[0].name}...`);
+  output.appendChild(textNode);
 
   const formData = new FormData();
   formData.append("file", fileInput.files[0]);
@@ -22,30 +32,40 @@ async function uploadFile() {
     });
 
     if (!res.ok) {
-      output.innerHTML = "<p style='color:red;'>❌ Upload failed.</p>";
-      uploadBtn.disabled = false;
+      spinner.remove();
+      const errMsg = await res.text();
+      output.innerHTML = `<p style="color:red;">❌ Upload failed: ${errMsg}</p>`;
       return;
     }
 
     const blob = await res.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "result.json";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    processedBlob = blob; // store the blob for download
 
-    output.innerHTML += "<p style='color:green;'>✅ File processed! Download started.</p>";
+    // Stop spinner and show success
+    spinner.remove();
+    output.innerHTML = `<p style="color:green;">✅ File uploaded successfully!</p>`;
+    downloadBtn.disabled = false; // enable download
 
   } catch (err) {
+    spinner.remove();
     output.innerHTML = "<p style='color:red;'>❌ Upload failed. Check console.</p>";
     console.error("Upload failed", err);
   } finally {
     uploadBtn.disabled = false;
-    fileInput.value = ""; // Reset file input so user can upload again
+    fileInput.value = ""; // reset file input
   }
 }
 
+function downloadFile() {
+  if (!processedBlob) return;
+
+  const a = document.createElement("a");
+  a.href = window.URL.createObjectURL(processedBlob);
+  a.download = "result.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
 document.getElementById("uploadBtn").addEventListener("click", uploadFile);
-d
+document.getElementById("downloadBtn").addEventListener("click", downloadFile);
