@@ -57,14 +57,19 @@ Clone the repository:
 ```bash
 git clone https://github.com/AnushkaNegi27/voyagepulse.git
 cd voyagepulse
+```
 
 Install Python dependencies:
 ```bash
 pip install -r requirements.txt
+```
 
 Run the application:
 ```bash
 python app.py
+```
+
+
 
 Contributors
 
