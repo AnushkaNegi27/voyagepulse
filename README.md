@@ -1,4 +1,4 @@
-# VoyagePulse
+# VoyagePulse – SoF Event Extractor & Laytime Intelligence
 
 VoyagePulse is an intelligent system designed to streamline SoF (Statement of Facts) Event Extraction – Laytime Intelligence.
 It helps shipping companies and operators by automatically extracting operational events from SoF documents (PDF/Word), ensuring accuracy, consistency, and efficiency.
@@ -10,148 +10,63 @@ These documents capture vital port operations like cargo loading, shifting, anch
 
 ### Challenges
 
-Format variations across different ports and agencies.
+Format variations across different ports and agencies
 
-Risk of missed events due to unstructured data.
+Risk of missed events due to unstructured data
 
-Manual processing delays affecting voyage performance.
+Manual processing delays affecting voyage performance
 
 ### Our Solution – VoyagePulse
 
 VoyagePulse provides an AI-driven system that:
 
-📂 Accepts SoFs in PDF and Word formats.
+📂 Accepts SoFs in PDF and Word formats
 
-🔍 Extracts all events with start & end times (template-agnostic).
+🔍 Extracts all events with start & end times (template-agnostic)
 
-🛑 Ensures no events are missed, regardless of formatting.
+🛑 Ensures no events are missed, regardless of formatting
 
-📊 Outputs structured data in JSON/CSV for downstream use.
+📊 Outputs structured data in JSON/CSV for downstream use
 
-🖥️ Includes a user-friendly web interface for uploads and reports.
-
-### Why VoyagePulse is Unique
-
-Unlike existing SoF parsing tools, VoyagePulse goes beyond basic extraction by:
-
-Integrating Azure OpenAI + spaCy pipelines for context-aware event detection.
-
-Supporting real-time validation to prevent missing critical port activities.
-
-Providing visual dashboards & analytics for better laytime intelligence.
-
-Designed with scalable cloud infrastructure (Azure) for enterprise adoption.
-
-### Core Tech Stack
-
-🔹 Frontend (User Interface)
-
-HTML5, CSS3, JavaScript (ES6+)
-
-React.js or Vue.js – for responsive, component-based UIs
-
-Bootstrap / TailwindCSS – for styling
-
-🔹 Backend (Application Logic)
-
-PHP (Laravel or Symfony) – for scalable web applications (preferred at IME)
-
-Node.js (optional) – for asynchronous services / microservices
-
-Python – for ML pipelines, document parsing, and NLP
-
-🔹 Database & Storage
-
-MySQL / PostgreSQL – relational data (contracts, voyages, events)
-
-Azure Blob Storage / Amazon S3 – for uploading & storing documents
-
-🔹 AI / Machine Learning / NLP Tools
-
-Azure Cognitive Services – OCR, form recognition, document analysis
-
-Azure OpenAI – summarization, clause matching, negotiation intelligence
-
-spaCy, Transformers (Hugging Face) – event & clause extraction
-
-Scikit-learn / TensorFlow – ML models (classification / prediction)
-
-🔹 DevOps & Cloud Infrastructure
-
-Microsoft Azure – hosting and cloud services
-
-Azure Web Apps, Azure Functions, Azure SQL, Azure Logic Apps
-
-GitHub Actions / Azure DevOps – CI/CD pipeline automation
+🖥️ Provides a simple user-friendly web interface for uploading files and previewing results
 
 
-### System Architecture Overview
+### Tech Stack (Used)
 
-The architecture is designed for modularity, scalability, and maintainability:
+Frontend: HTML, CSS, JavaScript (ES6+)
 
-Client Layer (Frontend)
+Backend / Processing: Python
 
-Web app for uploading SoF files, dashboards, and reports.
+NLP / AI Tools: spaCy, Azure OpenAI
 
-Communicates with backend via REST APIs.
+Output: JSON / CSV
 
-Application Layer (Backend/API)
 
-Endpoints for document processing, AI-based extraction, and authentication.
+### System Overview
 
-Queue system (Azure Queue Storage / Redis) for background processing.
+Upload Layer: Users upload SoF PDF/Word documents via the web interface
 
-Processing & Intelligence Layer
+Processing Layer: OCR + NLP pipelines detect events and extract start/end times
 
-OCR + NLP pipelines for event detection.
+Output Layer: Structured data is generated in JSON/CSV format for reporting or further use
 
-AI models for summarization, clause mapping, and anomaly detection.
-
-Database & Storage Layer
-
-SQL database for structured voyage/event data.
-
-Cloud storage for documents and outputs.
-
-Caching (Redis/Memcached) for faster access.
-
-Reporting & Export Layer
-
-Export to JSON/CSV for integrations.
-
-Automated PDF/Excel report generation.
 
 ### Getting Started
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/AnushkaNegi27/voyagepulse.git
-   cd voyagepulse
-   
-2. Install dependencies
-   
-   Frontend:
-   ```bash
-   npm install
-   ```
-   Backend:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   
-4. Run the application
-   
-   Frontend:
-   ```bash
-   npm start
-   ```
-   
-   Backend:
-   ```bash
-   python app.py
-   ```
+Clone the repository:
+```bash
+git clone https://github.com/AnushkaNegi27/voyagepulse.git
+cd voyagepulse
 
-### Contributors
+Install Python dependencies:
+```bash
+pip install -r requirements.txt
+
+Run the application:
+```bash
+python app.py
+
+Contributors
 
 Anushka Negi
 
